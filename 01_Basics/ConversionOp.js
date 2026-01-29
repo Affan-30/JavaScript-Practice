@@ -101,3 +101,26 @@ console.log('1' == 1); // true (loose equality, convert datatypes)
 //        Arrays  =>  object
 //        Function  =>  function
 //        Object  =>  object
+
+//Primitive (Stored BY VAlue) -> Stack Memory
+let s1 = "affan"
+
+let s2 = s1
+s2= "Shaikh"
+console.log(s1); //affan
+console.log(s2); //shaikh
+
+
+
+//Non Primitive (Stored By reference) -> Heap Memory
+let obj1 = {
+    email : "affan@gmail.com",
+    password : "12345678"
+}
+
+let obj2 = obj1
+
+obj2.email = "shaikh@gmail.com"
+
+console.log(obj1); //{ email: 'shaikh@gmail.com', password: '12345678' }
+console.log(obj2); //{ email: 'shaikh@gmail.com', password: '12345678' }
