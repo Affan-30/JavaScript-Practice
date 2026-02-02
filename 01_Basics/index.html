@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Backend API Documentation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .api-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .method {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .GET { background-color: #16a34a; }
+        .POST { background-color: #2563eb; }
+        .PUT { background-color: #d97706; }
+        .DELETE { background-color: #dc2626; }
+
+        .endpoint {
+            font-family: monospace;
+            background: #f1f5f9;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th, table td {
+            border: 1px solid #e5e7eb;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f1f5f9;
+        }
+
+        .note {
+            background: #fff7ed;
+            padding: 10px;
+            border-left: 4px solid #f97316;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #e5e7eb;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Backend API Documentation</h1>
+    <p>Easy guide for all backend endpoints</p>
+</header>
+
+<section>
+
+    <!-- API 1 -->
+    <div class="api-card">
+        <span class="method POST">POST</span>
+        <h2>User Registration</h2>
+
+        <div class="endpoint">
+            /public/create-user
+        </div>
+
+        <p><strong>Description:</strong> Registers a new user into the system.</p>
+
+        <h3>Request Body</h3>
+        <div class="endpoint">
+            { <br>
+     "userName": "Izhan",<br>
+    "password": "izhan123",<br>
+    "email" : "sarinashaikh050@gmail.com"<br>
+}
+        </div>
+
+        <h3>Response</h3>
+        <div class="endpoint">
+            200 OK
+        </div>
+
+        <div class="note">
+            🔐 Password is encrypted before saving in database.
+        </div>
+    </div>
+
+    <!-- API 2 -->
+    <div class="api-card">
+        <span class="method GET">GET</span>
+        <h2>Get All Users</h2>
+
+        <div class="endpoint">
+            /api/users
+        </div>
+
+        <p><strong>Description:</strong> Fetches list of all registered users.</p>
+
+        <h3>Headers</h3>
+        <table>
+            <tr>
+                <th>Header</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Authorization</td>
+                <td>Bearer JWT_TOKEN</td>
+            </tr>
+        </table>
+
+        <h3>Response</h3>
+        <div class="endpoint">
+            [
+              {
+                "id": 1,
+                "username": "Affan",
+                "email": "affan@email.com"
+              }
+            ]
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Backend API Guide | Created by You
+</footer>
+
+</body>
+</html>

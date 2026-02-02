@@ -124,3 +124,5 @@ obj2.email = "shaikh@gmail.com"
 
 console.log(obj1); //{ email: 'shaikh@gmail.com', password: '12345678' }
 console.log(obj2); //{ email: 'shaikh@gmail.com', password: '12345678' }
+
+
