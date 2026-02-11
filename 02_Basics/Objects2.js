@@ -30,10 +30,19 @@ const o3 = {...o1, ...o2}
 
 // console.log(o3);
 
-console.log(obj1);
+// console.log(obj1);
 // console.log(Object.keys(obj1));
 // console.log(Object.values(obj1));
 // console.log(Object.entries(obj1));
 
 console.log(obj1.hasOwnProperty("id2"));
 
+const course = {
+    name : "Natural Language Processing",
+    duration : 4,
+    fees : 25000
+}
+
+const {fees : rs} = course
+
+console.log("the course fees is ",rs);
