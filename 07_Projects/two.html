@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock{
+            background-color: beige;
+            padding: 50px;
+            color: black;
+            font-size: 50px;
+            font-weight: 900;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>CLOCK</h1>
+        <span>
+
+        </span>
+        <div class="clock">
+
+        </div>
+   
+</body>
+<script>
+    const time = document.getElementsByClassName('clock')
+    
+    setInterval(() => {
+         let date = new Date()
+         console.log(date.toLocaleTimeString());
+        document.querySelector('span').innerHTML = date.toDateString()
+        document.querySelector('div').innerHTML = date.toLocaleTimeString()
+    }, 1000);
+
+    
+</script>
+</html>
