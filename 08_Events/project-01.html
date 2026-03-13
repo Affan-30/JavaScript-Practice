@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 : BG Changer</title>
+    <style>
+        .btn{
+            padding: 50px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button  class="btn" onclick="changeBG(1)" style="background-color: red;">Red</button>
+    <button  class="btn" onclick="changeBG(2)" style="background-color: green;">Green</button>
+    <button  class="btn" onclick="changeBG(3)" style="background-color: yellow;">Yellow</button>
+    <button  class="btn" onclick="changeBG(4)" style="background-color: blue;">Blue</button>
+</body>
+
+<script>
+
+     let i = 1
+    setInterval(() => {
+        changeBG(i);
+        if(i<4){
+            i = i+1
+        }else{
+            i=1;
+        }
+    }, 1000);
+
+function changeBG(color) {
+    switch (color) {
+        case 1:
+            document.body.style.backgroundColor = "red"
+            break;
+
+        case 2:
+            document.body.style.backgroundColor = "green"
+            break;
+        
+        case 3:
+            document.body.style.backgroundColor = "yellow"
+            break;
+
+        case 4:
+            document.body.style.backgroundColor = "blue"
+            break;
+
+        default:
+            break;
+    }
+}
+
+</script>
+
+</html>
